@@ -1,7 +1,4 @@
-# restful api required libraries, use the following commands to install
-# python -m pip install requests
-# python -m pip install --upgrade pip
-import requests # restful API support
+import requests
 import json
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -23,10 +20,6 @@ class LeostreamSession:
   broker = property(get_broker, set_broker)
 
   def authenticate(self):
-    #---------------------------------------------------------
-    #   Login
-    #---------------------------------------------------------
-    #print(f"Logging into broker {self._broker} as {self._login}\n\n")
     URL="https://"+str(self._broker)+"/rest/v1/session/login"
     PARAMS = {
     'user_login':self._login,

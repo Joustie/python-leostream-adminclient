@@ -1,11 +1,9 @@
-import requests # restful API support
-import json     # supports json formatting
+import requests
+import json
 import os
 
 class WebResource(object):
 
-    
-    
     def list(self):
         self._HEADERS = {
         'Content-Type':'application/json',
@@ -46,4 +44,3 @@ class WebResource(object):
         filename = jsondir + '/' + self.resource + '.json'
         with open(filename, 'w') as f:
             json.dump(data, f, indent=1)
-        

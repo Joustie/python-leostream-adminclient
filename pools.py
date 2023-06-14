@@ -1,10 +1,5 @@
 from login import LeostreamSession
 from webresource import WebResource
-#---------------------------------------------------------
-#   Get list of Pools
-#   Session id goes in header.   
-#   Everything else goes in the PARAMS 
-#---------------------------------------------------------
 
 class LeostreamPools(WebResource):
     
