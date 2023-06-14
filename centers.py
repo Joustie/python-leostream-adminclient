@@ -7,5 +7,3 @@ class LeostreamCenters(WebResource):
         self._api = LeostreamSession()
         self.resource = "centers"
         self._URL="https://"+str(self._api.broker)+"/rest/v1/centers?as+tree=0"
-
-        
