@@ -1,8 +1,11 @@
 import requests # restful API support
 import json     # supports json formatting
+import os
 
 class WebResource(object):
 
+    
+    
     def list(self):
         self._HEADERS = {
         'Content-Type':'application/json',
@@ -39,7 +42,8 @@ class WebResource(object):
 
     def writefile(self, data):
         # Save the response to a file
-        filename = 'json/' + self.resource + '.json'
+        jsondir= os.getenv("LEOSTREAM_API_JSONDIR", ".")
+        filename = jsondir + '/' + self.resource + '.json'
         with open(filename, 'w') as f:
             json.dump(data, f, indent=1)
         

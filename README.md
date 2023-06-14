@@ -18,20 +18,15 @@ See [here](https://github.com/Joustie/leostream-client-go/blob/main/README.md) f
 
 ## How to use
 
-To access the Leostream API, you *need* to set the following environment variables:
-- LEOSTREAM_API_URL
-- LEOSTREAM_API_USERNAME
-- LEOSTREAM_API_PASSWORD
-
 #### Add environment vars needed to access the Leostream API
 ```bash
-```bash
-export LEOSTREAM_API_HOSTNAME="192.168.178.79"
-export LEOSTREAM_API_USERNAME="api"
-export LEOSTREAM_API_PASSWORD="System@123"
+export LEOSTREAM_API_HOSTNAME="192.168.178.79"  # required
+export LEOSTREAM_API_USERNAME="api"             # required
+export LEOSTREAM_API_PASSWORD="System@123"      # required
+export LEOSTREAM_API_JSONDIR="json"             # optional
 ```
 
-#### Create a directory to store the json output
+#### Create the directory to store the json output if you defined it in the environment vars
 ```bash
 mkdir json
 ```
@@ -39,6 +34,8 @@ mkdir json
 #### Install dependencies
 ```bash
 pip install -r requirements.txt
+or
+pip3 install -r requirements.txt
 ```
 
 ## Start server
@@ -49,5 +46,5 @@ uvicorn main:app --reload
 ##  Browse to api
 Go to http://localhost:8000/docs
 
-All methods save the json response body to a file in the json directory of the server.
+All methods save the json response body to a file in the designated  json directory of the server.
 The output is also written to the console of the server.
