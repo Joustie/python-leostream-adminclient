@@ -23,11 +23,22 @@ To access the Leostream API, you *need* to set the following environment variabl
 - LEOSTREAM_API_USERNAME
 - LEOSTREAM_API_PASSWORD
 
-#### Example
+#### Add environment vars needed to access the Leostream API
+```bash
 ```bash
 export LEOSTREAM_API_HOSTNAME="192.168.178.79"
 export LEOSTREAM_API_USERNAME="api"
 export LEOSTREAM_API_PASSWORD="System@123"
+```
+
+#### Create a directory to store the json output
+```bash
+mkdir json
+```
+
+#### Install dependencies
+```bash
+pip install -r requirements.txt
 ```
 
 ## Start server
