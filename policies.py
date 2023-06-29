@@ -7,3 +7,4 @@ class LeostreamPolicies(WebResource):
         self._api = LeostreamSession()
         self.resource = "policies"
         self._URL="https://"+str(self._api.broker)+"/rest/v1/policies?as+tree=0"
+        self.data = self.list()

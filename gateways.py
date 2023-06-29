@@ -7,3 +7,4 @@ class LeostreamGateways(WebResource):
         self._api = LeostreamSession()
         self.resource = "gateways"
         self._URL="https://"+str(self._api.broker)+"/rest/v1/gateways?as+tree=0"
+        self.data = self.list()

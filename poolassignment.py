@@ -9,3 +9,4 @@ class LeostreamPoolAssignment(WebResource):
         self._id = id
         self._pool_id = pool_id
         self._URL="https://"+str(self._api.broker)+"/rest/v1/policies/"+ str(self._id)+ "/pool-assignments/" + str(self._pool_id)
+        self.data = self.get()

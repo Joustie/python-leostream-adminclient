@@ -8,3 +8,4 @@ class LeostreamCenter(WebResource):
         self.resource = "center"
         self._id = id
         self._URL="https://"+str(self._api.broker)+"/rest/v1/centers/"+ str(self._id)
+        self.data = self.get()

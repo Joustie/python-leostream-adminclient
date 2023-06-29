@@ -14,7 +14,8 @@ class WebResource(object):
         pretty_json = json.dumps(data, indent=1)
         print(f"The brokers response is\n{pretty_json} \n\n")
         
-        self.writefile(data)
+        if response.status_code == 200:
+            self.writefile(data)
 
         if response:
             return data
@@ -32,7 +33,8 @@ class WebResource(object):
         pretty_json = json.dumps(data, indent=1)
         print(f"The brokers response is\n{pretty_json} \n\n")
         
-        self.writefile(data)
+        if response.status_code == 200:
+            self.writefile(data)
         
         if response:
             return data

@@ -8,3 +8,4 @@ class LeostreamPool(WebResource):
         self.resource = "pool"
         self._id = id
         self._URL="https://"+str(self._api.broker)+"/rest/v1/pools/"+ str(self._id)
+        self.data = self.get()
